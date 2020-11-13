@@ -8,7 +8,7 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: "3.0.0",
-      title: "IOO API",
+      title: "IOT API",
       description: "design your API",
       contact: {
         name: "Amazing Developerr"
@@ -33,6 +33,12 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
  *    produces:
  *      - application/json
  *    parameters:
+ *      - name: Authorization
+ *        in: query
+ *        required: true
+ *        schema:
+ *          type: string
+ *          example: Basic auth
  *      - in: body
  *        description: body
  *        schema:
@@ -70,7 +76,7 @@ app.post("/auth/login",(req, res) => {
  *      - application/json
  *    parameters:
  *      - name: Authorization
- *        in: header
+ *        in: query
  *        required: true
  *        schema:
  *          type: string
@@ -144,8 +150,6 @@ app.post("/customers", (req, res) => {
  *    summary: get all customers
  *    tags:
  *    - profile
- *    security:
- *    - bearerAuth: []
  *    parameters:
  *      - name: Authorization
  *        in: query
@@ -186,17 +190,6 @@ app.get("/customers", (req, res) => {
  *      responses:
  *        200:
  *         description: OK
- * securityDefinitions:
- *  basicAuth:     
- *    type: basic
- *    description: "user: telkom, password : da1c25d8-37c8-41b1-afe2-42dd4825bfea"
- *  bearerAuth:
- *    type: http
- *    schema: bearer
- *    description: "Bearer Token"
- *    bearerFormat: JWT
- * security:
- *  - BasicAuth: []
  */
 app.put("/customers/:id", (req, res) => {
   res.status(200).json({
@@ -244,6 +237,11 @@ app.listen(port, () => {
  *       gender:
  *         type: string
  *         example: male
- * 
- * 
  */
+
+ 
+ 
+ 
+ 
+ 
+ 

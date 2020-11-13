@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 7000;
 // Extended: https://swagger.io/specification/#infoObject
 const swaggerOptions = {
   swaggerDefinition: {
@@ -13,7 +13,7 @@ const swaggerOptions = {
       contact: {
         name: "Amazing Developerr"
       },
-      servers: ["http://localhost:5000"]
+      servers: ["http://localhost:7000"]
     }
   },
   // ['.routes/*.js']
