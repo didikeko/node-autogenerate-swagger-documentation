@@ -14,8 +14,6 @@ const { resolve } = require('path');
 app.use(cors());
 app.use(express.json())
 
-const port = process.env.PORT || 4000;
-
 // function getStandardResponse(status,message,data){
 //     return {
 //         status: status,
@@ -24,7 +22,7 @@ const port = process.env.PORT || 4000;
 //      }
 // }
 
-var js = fs.readFileSync('app.js','utf8').split('\n').filter(Boolean);
+var js = fs.readFileSync('./modules/swaggerlist/myptm.js','utf8').split('\n').filter(Boolean);
 app.get("/readfile", (req, res) => {
   res.status(200).json({
     success: true,
@@ -36,7 +34,7 @@ app.get("/readfile", (req, res) => {
 app.post("/append", (req, res) => {
     var x = req.body.join('\n');
     // console.log(x);
-    fs.writeFile('app.js', x, function (err) {
+    fs.writeFile('./modules/swaggerlist/myptm.js', x, function (err) {
       if (err) throw err;
       else {
           res.status(200).json({
@@ -49,7 +47,7 @@ app.post("/append", (req, res) => {
     });
 });
 
-
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
+module.exports = app;
+// app.listen(port, () => {
+//   console.log(`Server listening on port ${port}`);
+// });

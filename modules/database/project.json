@@ -1,0 +1,14 @@
+[
+    {
+        "project_name": "api-myptm",
+        "description": "MyPertamina API",
+        "version": "1.0",
+        "contacts": "pram001@gmail.com"
+    },
+    {
+        "project_name": "api-logee",
+        "description": "Logee API",
+        "version": "1.0",
+        "contacts": "pram001@gmail.com"
+    }
+]
