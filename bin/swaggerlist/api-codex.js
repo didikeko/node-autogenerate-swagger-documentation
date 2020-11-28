@@ -4,102 +4,23 @@ const app = express();
 const swaggerOptions = {
     swaggerDefinition: {
       info: {
-        version: "3.0.0",
-        title: "LOGEE API",
-        description: "design your API",
+        version: "1.0",
+        title: "CODEX API",
+        description: "Codex API",
         contact: {
-          name: "Amazing Developerr"
+          name: "pram001@gmail.com"
         },
-        servers: ["http://localhost:5000/api-logee"]
+        servers: ["http://localhost:5000/api-codex"]
       }
     },
     // ['.routes/*.js']
     definitions: {},
-    apis: ["./modules/swaggerlist/logee.js"]
+    apis: ["./bin/swaggerlist/api-codex.js"]
   };
-/**
- * @swagger
- * /api-logee/auth/login:
- *  post:
- *    description: login
- *    summary: login customer
- *    tags:
- *    - credential
- *    produces:
- *      - application/json
- *    parameters:
- *      - in: body
- *        description: body
- *        schema:
- *          type: object
- *          properties:
- *            mobileNumber: 
- *              type: string
- *              example: 085858192789
- *            pin: 
- *              type: string
- *              example: 888888
- *    responses:
- *      '200':
- *        description: OK
- */
-app.post("/api-logee/auth/login",(req, res) => {
-    res.status(200).json({
-        success: true,
-        data: { 
-            "token": "xx" 
-        },
-        message: "successfully login",
-        code: 200
-    })
-});
-/**
- * @swagger
- * /api-logee/auth/register:
- *  post:
- *    description: register customer
- *    summary: register customer
- *    tags:
- *    - credential
- *    produces:
- *      - application/json
- *    parameters:
- *      - name: Authorization
- *        in: header
- *        required: true
- *        schema:
- *          type: string
- *          example: Basic auth
- *      - in: body
- *        description: body
- *        schema:
- *          type: object
- *          properties:
- *            name: 
- *              type: string
- *              example: pram
- *            mobileNumber: 
- *              type: string
- *              example: 085858192789
- *            pin: 
- *              type: string
- *              example: 888888
- *    responses:
- *      '200':
- *        description: OK
- */
-app.post("/api-logee/auth/register",(req, res) => {
-    res.status(200).json({
-        success: true,
-        data: regis,
-        message: "successfully registered",
-        code: 200
-    })
-});
 // Routes
 /**
  * @swagger
- * /api-logee/customers:
+	 * /api-codex/customers:
  *  post:
  *    description: Use to request all customerss
  *    summary: register customer
@@ -123,7 +44,7 @@ app.post("/api-logee/auth/register",(req, res) => {
  *      '200':
  *        description: OK
  */
-app.post("/api-logee/customers", (req, res) => {
+app.post("/api-codex/customers", (req, res) => {
   res.status(200).json({
       success: true,
       message: "customers successfully created",
@@ -133,7 +54,7 @@ app.post("/api-logee/customers", (req, res) => {
 // Routes
 /**
  * @swagger
- * /api-logee/customers:
+ * /api-codex/customers:
  *  get:
  *    description: Use to request all customerss
  *    summary: get all customers
@@ -153,7 +74,7 @@ app.post("/api-logee/customers", (req, res) => {
  *      '200':
  *        description: OK
  */
-app.get("/api-logee/customers", (req, res) => {
+app.get("/api-codex/customers", (req, res) => {
   res.status(200).json({
       success: true,
       data: customers,
@@ -163,7 +84,7 @@ app.get("/api-logee/customers", (req, res) => {
 });
 /**
  * @swagger
- * /api-logee/customers/{id}:
+ * /api-codex/customers/{id}:
  *    put:
  *      description: Use to return customers by id
  *      summary: get detail customer
@@ -193,7 +114,7 @@ app.get("/api-logee/customers", (req, res) => {
  * security:
  *  - BasicAuth: []
  */
-app.put("/api-logee/customers/:id", (req, res) => {
+app.put("/api-codex/customers/:id", (req, res) => {
   res.status(200).json({
     success: true,
     data: { 

@@ -1,0 +1,42 @@
+[
+  {
+    "username": "pram",
+    "project_name": "api-myptm",
+    "title": "MYPTM API",
+    "description": "MyPertamina API",
+    "version": "1.0",
+    "contacts": "pram001@gmail.com"
+  },
+  {
+    "username": "pram",
+    "project_name": "api-logee",
+    "title": "LOGEE API",
+    "description": "Logee API",
+    "version": "1.0",
+    "contacts": "pram001@gmail.com"
+  },
+  {
+    "username": "pram",
+    "project_name": "api-codex",
+    "title": "CODEX API",
+    "description": "Codex API",
+    "version": "1.0",
+    "contacts": "pram001@gmail.com"
+  },
+  {
+    "username": "difa",
+    "project_name": "api-telkomdds",
+    "title": "TELKOMDDS API",
+    "description": "Telkom DDS API",
+    "version": "1.0",
+    "contacts": "difa@gmail.com"
+  },
+  {
+    "username": "deni",
+    "project_name": "api-inpoint",
+    "title": "INPOINT API",
+    "description": "Telkom INPOINT API",
+    "version": "1.0",
+    "contacts": "deni@gmail.com"
+  }
+]

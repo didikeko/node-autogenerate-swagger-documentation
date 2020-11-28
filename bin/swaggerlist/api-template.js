@@ -15,87 +15,8 @@ const swaggerOptions = {
     },
     // ['.routes/*.js']
     definitions: {},
-    apis: ["./modules/swaggerlist/myptm.js"]
+    apis: ["./bin/swaggerlist/api-myptm.js"]
   };
-/**
- * @swagger
- * /api-myptm/auth/login:
- *  post:
- *    description: login
- *    summary: login customer
- *    tags:
- *    - credential
- *    produces:
- *      - application/json
- *    parameters:
- *      - in: body
- *        description: body
- *        schema:
- *          type: object
- *          properties:
- *            mobileNumber: 
- *              type: string
- *              example: 085858192789
- *            pin: 
- *              type: string
- *              example: 888888
- *    responses:
- *      '200':
- *        description: OK
- */
-app.post("/api-myptm/auth/login",(req, res) => {
-    res.status(200).json({
-        success: true,
-        data: { 
-            "token": "xx" 
-        },
-        message: "successfully login",
-        code: 200
-    })
-});
-/**
- * @swagger
- * /api-myptm/auth/register:
- *  post:
- *    description: register customer
- *    summary: register customer
- *    tags:
- *    - credential
- *    produces:
- *      - application/json
- *    parameters:
- *      - name: Authorization
- *        in: header
- *        required: true
- *        schema:
- *          type: string
- *          example: Basic auth
- *      - in: body
- *        description: body
- *        schema:
- *          type: object
- *          properties:
- *            name: 
- *              type: string
- *              example: pram
- *            mobileNumber: 
- *              type: string
- *              example: 085858192789
- *            pin: 
- *              type: string
- *              example: 888888
- *    responses:
- *      '200':
- *        description: OK
- */
-app.post("/api-myptm/auth/register",(req, res) => {
-    res.status(200).json({
-        success: true,
-        data: regis,
-        message: "successfully registered",
-        code: 200
-    })
-});
 // Routes
 /**
  * @swagger
