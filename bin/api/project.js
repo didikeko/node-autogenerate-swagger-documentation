@@ -17,6 +17,8 @@ function respon(status,data=null, code, message){
    }
 }
 
+
+
 function pushitemjson(item){
     fs.readFile(pathfiledata, 'utf8', function (err, data) {
         if (err) {
@@ -53,6 +55,39 @@ app.get('/project', (req, res) => {
      
      });
 })
+
+app.get('/project/:project_name', (req, res) => {
+    fs.readFile(pathfiledata, 'utf8', function (err, data) {
+        if (err) {
+            console.log(err)
+        } else {
+            var file = JSON.parse(data);
+            var isFind = false;
+            var x = null;
+            for(i in file){
+                if(file[i].project_name === req.params.project_name) {
+                    isFind = true;
+                    x = i;
+                    break;
+                } 
+            }
+            
+            if (isFind==true){
+                res.status(200).json(
+                    respon(true, file[i], 200, "detail project")
+                )
+            }else{
+                res.status(404).json(
+                    respon(false, null, 404, "project not found")
+                )
+            }
+            
+        }
+     
+     });
+})
+
+
 
 app.post("/project", (req, res) => {  
       

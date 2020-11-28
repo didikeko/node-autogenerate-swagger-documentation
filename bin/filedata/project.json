@@ -38,5 +38,21 @@
     "description": "Telkom INPOINT API",
     "version": "1.0",
     "contacts": "deni@gmail.com"
+  },
+  {
+    "username": "ugm",
+    "project_name": "api-ugm",
+    "title": "UGM API",
+    "description": "UGM API",
+    "version": "1.0",
+    "contacts": "ugm@gmail.com"
+  },
+  {
+    "username": "umy",
+    "project_name": "api-umy",
+    "title": "UMY API",
+    "description": "UMY API",
+    "version": "1.0",
+    "contacts": "umy@gmail.com"
   }
 ]
