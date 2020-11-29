@@ -54,5 +54,13 @@
     "description": "UMY API",
     "version": "1.0",
     "contacts": "umy@gmail.com"
+  },
+  {
+    "username": "unnes",
+    "project_name": "api-unnes",
+    "title": "UNNES API",
+    "description": "UNNES API",
+    "version": "1.0",
+    "contacts": "unnes@gmail.com"
   }
 ]

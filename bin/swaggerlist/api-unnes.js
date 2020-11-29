@@ -5,22 +5,22 @@ const swaggerOptions = {
     swaggerDefinition: {
       info: {
         version: "1.0",
-        title: "UGM API",
-        description: "UGM API",
+        title: "UNNES API",
+        description: "UNNES API",
         contact: {
-          name: "ugm@gmail.com"
+          name: "unnes@gmail.com"
         },
-        servers: ["http://localhost:5000/api-ugm"]
+        servers: ["http://localhost:5000/api-unnes"]
       }
     },
     // ['.routes/*.js']
     definitions: {},
-    apis: ["./bin/swaggerlist/api-ugm.js"]
+    apis: ["./bin/swaggerlist/api-unnes.js"]
   };
 // Routes
 /**
  * @swagger
-	 * /api-ugm/customers:
+	 * /api-unnes/customers:
  *  post:
  *    description: Use to request all customerss
  *    summary: register customer
@@ -44,7 +44,7 @@ const swaggerOptions = {
  *      '200':
  *        description: OK
  */
-app.post("/api-ugm/customers", (req, res) => {
+app.post("/api-unnes/customers", (req, res) => {
   res.status(200).json({
       success: true,
       message: "customers successfully created",
@@ -54,7 +54,7 @@ app.post("/api-ugm/customers", (req, res) => {
 // Routes
 /**
  * @swagger
- * /api-ugm/customers:
+ * /api-unnes/customers:
  *  get:
  *    description: Use to request all customerss
  *    summary: get all customers
@@ -74,7 +74,7 @@ app.post("/api-ugm/customers", (req, res) => {
  *      '200':
  *        description: OK
  */
-app.get("/api-ugm/customers", (req, res) => {
+app.get("/api-unnes/customers", (req, res) => {
   res.status(200).json({
       success: true,
       data: customers,
@@ -84,7 +84,7 @@ app.get("/api-ugm/customers", (req, res) => {
 });
 /**
  * @swagger
- * /api-ugm/customers/{id}:
+ * /api-unnes/customers/{id}:
  *    put:
  *      description: Use to return customers by id
  *      summary: get detail customer
@@ -114,7 +114,7 @@ app.get("/api-ugm/customers", (req, res) => {
  * security:
  *  - BasicAuth: []
  */
-app.put("/api-ugm/customers/:id", (req, res) => {
+app.put("/api-unnes/customers/:id", (req, res) => {
   res.status(200).json({
     success: true,
     data: { 
